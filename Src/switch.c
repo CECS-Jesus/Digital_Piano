@@ -47,4 +47,3 @@ void GPIOPortF_Handler(void){
 		next_song();
 	}
 }
-
