@@ -140,27 +140,27 @@ void SysTick_Handler(void){
 void GPIOPortF_Handler(void){
 	// simple debouncing code: generate 20ms to 30ms delay
 	for (uint32_t time=0;time<72724;time++) {}
-		if(GPIO_PORTF_RIS_R & SW1) { //if sw1 pressed
-			if(curr_mode == 0){
-				curr_mode = curr_mode + 1;
-				GPIO_PORTF_ICR_R = SW1; //ackowledge flag for sw1
-			}
-			if(curr_mode == 1){
-				curr_mode = curr_mode - 1;
-				GPIO_PORTF_ICR_R = SW1; //ackowledge flag for sw1
-			}	
+	if(GPIO_PORTF_RIS_R & SW1) { //if sw1 pressed
+		if(curr_mode == PIANO){
+			curr_mode = AUTO_PLAY;
+			GPIO_PORTF_ICR_R = SW1; //ackowledge flag for sw1
 		}
-			if(GPIO_PORTF_RIS_R & SW2){ 	 //if sw2 pressed
-				if(curr_mode == 0){ 				 //piano mode
-					octave = (octave + 1) % 3; // Increment the octave
-					GPIO_PORTF_ICR_R = SW2; 	 // acknowledge flag for SW2
-				}
-	
-				if(curr_mode == 1){ 								//autoplay mode
-					curr_song =  (curr_song + 1) % 3;	// Increment the song
-					GPIO_PORTF_ICR_R = SW2; 					// acknowledge flag for SW2
-				}		
-			}
+		else if(curr_mode == AUTO_PLAY){
+			curr_mode = PIANO;
+			GPIO_PORTF_ICR_R = SW1; //ackowledge flag for sw1
+		}	
+	}
+	if(GPIO_PORTF_RIS_R & SW2){ 	 //if sw2 pressed
+		if(curr_mode == PIANO){ 		 //piano mode
+			octave = (octave + 1) % 3; // Increment the octave
+			GPIO_PORTF_ICR_R = SW2; 	 // acknowledge flag for SW2
+		}
+
+		else if(curr_mode == AUTO_PLAY){ 		//autoplay mode
+			curr_song = (curr_song + 1) % 3;	// Increment the song
+			GPIO_PORTF_ICR_R = SW2; 					// acknowledge flag for SW2
+		}		
+	}
 }
 
 
