@@ -10,7 +10,6 @@
 #include "tm4c123gh6pm.h"
 #include "sound.h"
 #include <stdint.h>
-#include "Systick.h"
 #include <stdbool.h>
 #include "ButtonLed.h"
 
@@ -118,12 +117,6 @@ void DAC_Init(void){unsigned long volatile delay;
 // Input: time duration to be generated in number of machine cycles
 // Output: none
 
-void Sound_Init(void){
-  Index = 0;
-  NVIC_ST_CTRL_R = 0;         // disable SysTick during setup
-  NVIC_SYS_PRI3_R = (NVIC_SYS_PRI3_R&0x00FFFFFF)|0x20000000; // priority 1      
-  NVIC_ST_CTRL_R |= NVIC_ST_CTRL_CLK_SRC|NVIC_ST_CTRL_INTEN;  // enable SysTick with core clock and interrupts
-}
 
 void Sound_Start(uint32_t period){
   NVIC_ST_RELOAD_R = period-1;// reload value maybe 2x
@@ -184,70 +177,9 @@ void Delay(void){
   }
 }
 
-const NTyp* songs[NUM_SONGS] = {MaryHadALittleLamb, TwinkleTwinkleLittleStars, happybirthday};
-uint8_t songIdx = 0;
-
-bool play = false;
 
 void play_a_song()
 {
-	uint8_t prevIdx = songIdx;
-	uint8_t i=0, j;
-	const NTyp* notetab = songs[songIdx];
 	
-
-	while (notetab[i].delay) { // delay==0 indicate end of the song
-		if (notetab[i].tone_index==PAUSE) // index = 255 indicate a pause: stop systick
-			SysTick_stop(); // silence tone, turn off SysTick timer
-		else { // play a regular note
-			SysTick_Set_Current_Note(Tone_Tab[notetab[i].tone_index]);
-			SysTick_start();
-		}
-		
-		// tempo control: 
-		// play current note for specified duration
-		for (j=0;j<notetab[i].delay;j++) {
-			// if song changed or power off stop playing song
-			if (songIdx != prevIdx || !is_music_on()) {
-				SysTick_stop();
-				return;
-			}
-			Delay();
-		}
-		
-		SysTick_stop();
-		i++;  // move to the next note
-	}
-	
-	// pause after each play
-	for (j=0;j<15;j++) 
-		Delay();
 }
-
-// Move to the next song
-void next_song(void) {
-	if (0 <= songIdx && songIdx <= NUM_SONGS-2)
-		songIdx++;
-	else
-		songIdx = 0;
-}
-
-// check to see if the music is on or not
-uint8_t is_music_on(void) {
-	return play;
-}
-
-// turn off the music
-void turn_off_music(void) {
-	play = false;
-	songIdx = 0;
-}
-
-// turn on the music
-void turn_on_music(void) {
-	play = true;
-}
-
-
-
 
