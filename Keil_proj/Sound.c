@@ -37,24 +37,7 @@ const uint32_t Tone_Tab[] =
 
 // Constants
 // index definition for tones used in happy birthday.
-//#define G4 4 //change to enumeration definition 28 note names
-//#define A4 5
-//#define B4 6
-//#define C5 0+7
-//#define D5 1+7
-//#define E5 2+7
-//#define F5 3+7
-//#define G5 4+7
-//#define A5 5+7		
-
-// Index for notes used in music scores
-#define C6 0+2*7
-#define D6 1+2*7
-#define E6 2+2*7
-#define F6 3+2*7
-#define G6 4+2*7
-
-enum note_names{C4, D4, E4, F4, G4, A4, B4, C5, D5, E5, F5, G5, A5, B5};
+enum noteNames { C4, D4, E4, F4, G4, A4, B4, C5, D5, E5, F5, G5, A5, B5, C6, D6, E6, F6, G6 };
 
 #define PAUSE 255
 #define MAX_NOTES 255 // maximum number of notes for a song to be played in the program
@@ -102,14 +85,14 @@ volatile uint8_t octave=0;         // 0: lower C, 1: middle C, 2: upper C
 // Input: none
 // Output: none
 void DAC_Init(void){unsigned long volatile delay;
-  SYSCTL_RCGC2_R |= SYSCTL_RCGC2_GPIOB; // activate port B
-  delay = SYSCTL_RCGC2_R;    // allow time to finish activating
-  GPIO_PORTB_AMSEL_R &= ~0x3F;      // no analog 
-  GPIO_PORTB_PCTL_R &= ~0x00FFFFFF; // regular function
-  GPIO_PORTB_DIR_R |= 0x3F;      // make PB5-0 out
-  GPIO_PORTB_AFSEL_R &= ~0x3F;   // disable alt funct on PB5-0
-  GPIO_PORTB_DEN_R |= 0x3F;      // enable digital I/O on PB5-0
-  GPIO_PORTB_DR8R_R |= 0x3F;        // enable 8 mA drive on PB5-0
+	SYSCTL_RCGC2_R |= SYSCTL_RCGC2_GPIOB; // activate port B
+	delay = SYSCTL_RCGC2_R;    // allow time to finish activating
+	GPIO_PORTB_AMSEL_R &= ~0x3F;      // no analog 
+	GPIO_PORTB_PCTL_R &= ~0x00FFFFFF; // regular function
+	GPIO_PORTB_DIR_R |= 0x3F;      // make PB5-0 out
+	GPIO_PORTB_AFSEL_R &= ~0x3F;   // disable alt funct on PB5-0
+	GPIO_PORTB_DEN_R |= 0x3F;      // enable digital I/O on PB5-0
+	GPIO_PORTB_DR8R_R |= 0x3F;        // enable 8 mA drive on PB5-0
 }
 
 // **************Sound_Start*********************
@@ -119,8 +102,8 @@ void DAC_Init(void){unsigned long volatile delay;
 
 
 void Sound_Start(uint32_t period){
-  NVIC_ST_RELOAD_R = period-1;// reload value maybe 2x
-  NVIC_ST_CURRENT_R = 0;      // any write to current clears it
+	NVIC_ST_RELOAD_R = (2 * period)-1;// reload value maybe 2x
+	NVIC_ST_CURRENT_R = 0;      // any write to current clears it
 	NVIC_ST_CTRL_R |= NVIC_ST_CTRL_ENABLE;
 }
 
@@ -133,7 +116,7 @@ void Sound_stop(void)
 // Executed based on number of sampels in each period
 void SysTick_Handler(void){
 	GPIO_PORTF_DATA_R ^= 0x08;     // toggle PF3, debugging
-  Index = (Index+1)&0x3F;        // 64 samples for each period
+	Index = (Index+1)&0x3F;        // 64 samples for each period
 	DAC = SineWave[Index]; // output to DAC: 6-bit data
 }
 
@@ -176,10 +159,42 @@ void Delay(void){
 		time--;
   }
 }
+const NTyp* songs[NUM_SONGS] = {MaryHadALittleLamb, TwinkleTwinkleLittleStars, happybirthday};
+uint8_t songIdx = 0;
 
+bool play = false;
 
-void play_a_song()
-{
+// play the current song once
+void play_a_song(void) {
+	uint8_t prevIdx = songIdx;
+	uint8_t i=0, j;
+	const NTyp* notetab = songs[songIdx];
 	
+
+	while ((notetab[i].delay) && (curr_mode == AUTO_PLAY)) { // delay==0 indicate end of the song
+		if (notetab[i].tone_index==PAUSE) // index = 255 indicate a pause: stop systick
+			Sound_stop(); // silence tone, turn off SysTick timer
+		else { // play a regular note
+			Sound_Start(Tone_Tab[notetab[i].tone_index]/NUM_SAMPLES);
+		}
+		
+		// tempo control: 
+		// play current note for specified duration
+		for (j=0;j<notetab[i].delay;j++) {
+			// if song changed or power off stop playing song
+//			if (songIdx != prevIdx) {
+//				Sound_stop();
+//				return;
+//			}
+			Delay();
+		}
+		
+		Sound_stop();
+		i++;  // move to the next note
+	}
+	
+	// pause after each play
+	for (j=0;j<15;j++) 
+		Delay();
 }
 
