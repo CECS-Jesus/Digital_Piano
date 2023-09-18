@@ -31,10 +31,10 @@ void DAC_Init(void);
 // Input: time duration to be generated in number of machine cycles
 // Output: none
 void Sound_Init(void);
-void Sound_Start(uint32_t period);
+void Sound_Start(unsigned long period);
 void Sound_stop(void);
 void play_a_song(void);
-void Music_Init(void);
+void next_song(void);
 
 // Move to the next song
 void next_song(void);
@@ -48,3 +48,8 @@ void turn_off_music(void);
 // turn on the music
 void turn_on_music(void);
 
+//play notes
+void play_note_C(void);
+void play_note_D(void);
+void play_note_E(void);
+void play_note_F(void);
