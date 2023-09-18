@@ -27,9 +27,4 @@ void ButtonLed_Init(void);
 // Input: none
 // Output: none 
 void PianoKeys_Init(void);
-
 uint8_t get_current_mode(void);
-uint8_t play_note_C(void);
-uint8_t play_note_D(void);
-uint8_t play_note_E(void);
-uint8_t play_note_F(void);
