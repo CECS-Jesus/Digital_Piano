@@ -22,14 +22,14 @@ extern void WaitForInterrupt(void);
 // 3. Subroutines Section
 // MAIN: Mandatory for a C Program to be executable
 int main(void){
-  DisableInterrupts();    
-  DAC_Init();        // Port B 
+	DisableInterrupts();
+	Sound_Init();
+	DAC_Init();        // Port B 
 	ButtonLed_Init();  // Port F
-  PianoKeys_Init();  // Port D
-	Sound_Init();			 //	Sound Init
+	PianoKeys_Init();  // Port D
 	EnableInterrupts();
 	
-  while(1){
+	while(1){
 		switch (get_current_mode()) {
 			case PIANO:
 				WaitForInterrupt();
@@ -40,7 +40,7 @@ int main(void){
 			default:
 				break;
 		}
-  }
+	}
 }
 
 
