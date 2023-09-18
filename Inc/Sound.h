@@ -34,7 +34,6 @@ void Sound_Init(void);
 void Sound_Start(unsigned long period);
 void Sound_stop(void);
 void play_a_song(void);
-void next_song(void);
 
 // Move to the next song
 void next_song(void);
