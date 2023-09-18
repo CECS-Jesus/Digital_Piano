@@ -10,6 +10,7 @@
 #include "tm4c123gh6pm.h"
 #include <stdint.h>
 #include "ButtonLed.h"
+#include "Sound.h"
 
 // Constants
 #define SW1 0x10  // bit position for onboard switch 1(left switch)
@@ -20,7 +21,7 @@
 // Golbals
 volatile uint8_t curr_mode=PIANO;  // 0: piano mode, 1: auto-play mode
 volatile uint8_t major_idx = 0;
-volatile uint8_t note_C = 0, note_D = 0, note_E = 0, note_F = 0;
+
 
 //---------------------Switch_Init---------------------
 // initialize onboard switch and LED interface
@@ -80,24 +81,6 @@ uint8_t get_current_mode(void)
 	return curr_mode;
 }
 
-uint8_t play_note_C(void){
-	return note_C;
-}
-
-uint8_t play_note_D(void){
-	return note_D;
-}
-
-uint8_t play_note_E(void){
-	return note_E;
-}
-
-uint8_t play_note_F(void){
-	return note_F;
-}
-
-
-
 // Dependency: Requires PianoKeys_Init to be called first, assume at any time only one key is pressed
 // Inputs: None
 // Outputs: None
@@ -105,24 +88,25 @@ uint8_t play_note_F(void){
 // button is pressed, or released the interrupt will trigger.
 void GPIOPortD_Handler(void){  
   // simple debouncing code: generate 20ms to 30ms delay
-	for (uint32_t time=0;time<72724;time++) {}
-		if(curr_mode == PIANO){ //if in piano mode
-			
-			if(GPIO_PORTD_RIS_R&0x01){	// if pd0 pressed
-				note_C ^=0x01;
-				GPIO_PORTD_ICR_R = 0x01;	// acknowledge flag0
-			}
-			if(GPIO_PORTD_RIS_R&0x02){	// if pd1 pressed
-				note_D ^=0x02;
-				GPIO_PORTD_ICR_R = 0x02;	// acknowledge flag1
-			}
-			if(GPIO_PORTD_RIS_R&0x04){	// if pd2 pressed
-				note_E ^=0x04;
-				GPIO_PORTD_ICR_R = 0x04;	// acknowledge flag2
-			}
-			if(GPIO_PORTD_RIS_R&0x08){	// if pd3 pressed
-				note_F ^=0x08;
-				GPIO_PORTD_ICR_R = 0x08;	// acknowledge flag3
-			}			
-		}	 
+	for (uint32_t time=0;time<72724;time++);
+	if(curr_mode == PIANO){ //if in piano mode
+
+		if(GPIO_PORTD_RIS_R&0x01){	// if pd0 pressed
+			GPIO_PORTD_ICR_R = 0x01;	// acknowledge flag0
+			play_note_C();
+		}
+		if(GPIO_PORTD_RIS_R&0x02){	// if pd1 pressed
+			GPIO_PORTD_ICR_R = 0x02;	// acknowledge flag1
+			play_note_D();
+		}
+		if(GPIO_PORTD_RIS_R&0x04){	// if pd2 pressed
+			GPIO_PORTD_ICR_R = 0x04;	// acknowledge flag2
+			play_note_E();
+		}
+		if(GPIO_PORTD_RIS_R&0x08){	// if pd3 pressed
+			GPIO_PORTD_ICR_R = 0x08;	// acknowledge flag3
+			play_note_F();
+		}			
+	}	 
 }
+

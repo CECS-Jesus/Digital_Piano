@@ -16,28 +16,78 @@ Section Cross References
     startup.o(.text) refers to startup.o(HEAP) for HeapMem
     startup.o(.text) refers to startup.o(STACK) for StackMem
     sound.o(.ARM.exidx.text.DAC_Init) refers to sound.o(.text.DAC_Init) for [Anonymous Symbol]
+    sound.o(.text.Sound_Init) refers to sound.o(.bss.Index) for Index
+    sound.o(.ARM.exidx.text.Sound_Init) refers to sound.o(.text.Sound_Init) for [Anonymous Symbol]
     sound.o(.ARM.exidx.text.Sound_Start) refers to sound.o(.text.Sound_Start) for [Anonymous Symbol]
     sound.o(.ARM.exidx.text.Sound_stop) refers to sound.o(.text.Sound_stop) for [Anonymous Symbol]
     sound.o(.text.SysTick_Handler) refers to sound.o(.bss.Index) for Index
     sound.o(.text.SysTick_Handler) refers to sound.o(.rodata.SineWave) for SineWave
     sound.o(.ARM.exidx.text.SysTick_Handler) refers to sound.o(.text.SysTick_Handler) for [Anonymous Symbol]
+    sound.o(.text.next_song) refers to sound.o(.bss.songIdx) for songIdx
+    sound.o(.ARM.exidx.text.next_song) refers to sound.o(.text.next_song) for [Anonymous Symbol]
+    sound.o(.text.next_octave) refers to sound.o(.bss.octave) for octave
+    sound.o(.ARM.exidx.text.next_octave) refers to sound.o(.text.next_octave) for [Anonymous Symbol]
     sound.o(.text.GPIOPortF_Handler) refers to buttonled.o(.bss.curr_mode) for curr_mode
-    sound.o(.text.GPIOPortF_Handler) refers to sound.o(.bss.octave) for octave
-    sound.o(.text.GPIOPortF_Handler) refers to sound.o(.bss.curr_song) for curr_song
+    sound.o(.text.GPIOPortF_Handler) refers to sound.o(.text.next_octave) for next_octave
+    sound.o(.text.GPIOPortF_Handler) refers to sound.o(.text.next_song) for next_song
     sound.o(.ARM.exidx.text.GPIOPortF_Handler) refers to sound.o(.text.GPIOPortF_Handler) for [Anonymous Symbol]
     sound.o(.ARM.exidx.text.Delay) refers to sound.o(.text.Delay) for [Anonymous Symbol]
     sound.o(.text.play_a_song) refers to sound.o(.bss.songIdx) for songIdx
     sound.o(.text.play_a_song) refers to sound.o(.data.songs) for songs
     sound.o(.text.play_a_song) refers to buttonled.o(.bss.curr_mode) for curr_mode
     sound.o(.text.play_a_song) refers to sound.o(.text.Sound_stop) for Sound_stop
+    sound.o(.text.play_a_song) refers to sound.o(.bss.octave) for octave
     sound.o(.text.play_a_song) refers to sound.o(.rodata.Tone_Tab) for Tone_Tab
     sound.o(.text.play_a_song) refers to sound.o(.text.Sound_Start) for Sound_Start
     sound.o(.text.play_a_song) refers to sound.o(.text.Delay) for Delay
     sound.o(.ARM.exidx.text.play_a_song) refers to sound.o(.text.play_a_song) for [Anonymous Symbol]
+    sound.o(.text.play_note_C) refers to sound.o(.bss.octave) for octave
+    sound.o(.text.play_note_C) refers to sound.o(.rodata.Tone_Tab) for Tone_Tab
+    sound.o(.text.play_note_C) refers to sound.o(.text.Sound_Start) for Sound_Start
+    sound.o(.text.play_note_C) refers to sound.o(.text.Delay) for Delay
+    sound.o(.text.play_note_C) refers to sound.o(.text.Sound_stop) for Sound_stop
+    sound.o(.ARM.exidx.text.play_note_C) refers to sound.o(.text.play_note_C) for [Anonymous Symbol]
+    sound.o(.text.play_note_D) refers to sound.o(.bss.octave) for octave
+    sound.o(.text.play_note_D) refers to sound.o(.rodata.Tone_Tab) for Tone_Tab
+    sound.o(.text.play_note_D) refers to sound.o(.text.Sound_Start) for Sound_Start
+    sound.o(.text.play_note_D) refers to sound.o(.text.Delay) for Delay
+    sound.o(.text.play_note_D) refers to sound.o(.text.Sound_stop) for Sound_stop
+    sound.o(.ARM.exidx.text.play_note_D) refers to sound.o(.text.play_note_D) for [Anonymous Symbol]
+    sound.o(.text.play_note_E) refers to sound.o(.bss.octave) for octave
+    sound.o(.text.play_note_E) refers to sound.o(.rodata.Tone_Tab) for Tone_Tab
+    sound.o(.text.play_note_E) refers to sound.o(.text.Sound_Start) for Sound_Start
+    sound.o(.text.play_note_E) refers to sound.o(.text.Delay) for Delay
+    sound.o(.text.play_note_E) refers to sound.o(.text.Sound_stop) for Sound_stop
+    sound.o(.ARM.exidx.text.play_note_E) refers to sound.o(.text.play_note_E) for [Anonymous Symbol]
+    sound.o(.text.play_note_F) refers to sound.o(.bss.octave) for octave
+    sound.o(.text.play_note_F) refers to sound.o(.rodata.Tone_Tab) for Tone_Tab
+    sound.o(.text.play_note_F) refers to sound.o(.text.Sound_Start) for Sound_Start
+    sound.o(.text.play_note_F) refers to sound.o(.text.Delay) for Delay
+    sound.o(.text.play_note_F) refers to sound.o(.text.Sound_stop) for Sound_stop
+    sound.o(.ARM.exidx.text.play_note_F) refers to sound.o(.text.play_note_F) for [Anonymous Symbol]
+    sound.o(.text.play_note_G) refers to sound.o(.bss.octave) for octave
+    sound.o(.text.play_note_G) refers to sound.o(.rodata.Tone_Tab) for Tone_Tab
+    sound.o(.text.play_note_G) refers to sound.o(.text.Sound_Start) for Sound_Start
+    sound.o(.text.play_note_G) refers to sound.o(.text.Delay) for Delay
+    sound.o(.text.play_note_G) refers to sound.o(.text.Sound_stop) for Sound_stop
+    sound.o(.ARM.exidx.text.play_note_G) refers to sound.o(.text.play_note_G) for [Anonymous Symbol]
+    sound.o(.text.play_note_A) refers to sound.o(.bss.octave) for octave
+    sound.o(.text.play_note_A) refers to sound.o(.rodata.Tone_Tab) for Tone_Tab
+    sound.o(.text.play_note_A) refers to sound.o(.text.Sound_Start) for Sound_Start
+    sound.o(.text.play_note_A) refers to sound.o(.text.Delay) for Delay
+    sound.o(.text.play_note_A) refers to sound.o(.text.Sound_stop) for Sound_stop
+    sound.o(.ARM.exidx.text.play_note_A) refers to sound.o(.text.play_note_A) for [Anonymous Symbol]
+    sound.o(.text.play_note_B) refers to sound.o(.bss.octave) for octave
+    sound.o(.text.play_note_B) refers to sound.o(.rodata.Tone_Tab) for Tone_Tab
+    sound.o(.text.play_note_B) refers to sound.o(.text.Sound_Start) for Sound_Start
+    sound.o(.text.play_note_B) refers to sound.o(.text.Delay) for Delay
+    sound.o(.text.play_note_B) refers to sound.o(.text.Sound_stop) for Sound_stop
+    sound.o(.ARM.exidx.text.play_note_B) refers to sound.o(.text.play_note_B) for [Anonymous Symbol]
     sound.o(.data.songs) refers to sound.o(.rodata.MaryHadALittleLamb) for MaryHadALittleLamb
     sound.o(.data.songs) refers to sound.o(.rodata.TwinkleTwinkleLittleStars) for TwinkleTwinkleLittleStars
     sound.o(.data.songs) refers to sound.o(.rodata.happybirthday) for happybirthday
     project1p2.o(.text.main) refers to startup.o(.text) for DisableInterrupts
+    project1p2.o(.text.main) refers to sound.o(.text.Sound_Init) for Sound_Init
     project1p2.o(.text.main) refers to sound.o(.text.DAC_Init) for DAC_Init
     project1p2.o(.text.main) refers to buttonled.o(.text.ButtonLed_Init) for ButtonLed_Init
     project1p2.o(.text.main) refers to buttonled.o(.text.PianoKeys_Init) for PianoKeys_Init
@@ -48,19 +98,12 @@ Section Cross References
     buttonled.o(.ARM.exidx.text.PianoKeys_Init) refers to buttonled.o(.text.PianoKeys_Init) for [Anonymous Symbol]
     buttonled.o(.text.get_current_mode) refers to buttonled.o(.bss.curr_mode) for curr_mode
     buttonled.o(.ARM.exidx.text.get_current_mode) refers to buttonled.o(.text.get_current_mode) for [Anonymous Symbol]
-    buttonled.o(.text.play_note_C) refers to buttonled.o(.bss.note_C) for note_C
-    buttonled.o(.ARM.exidx.text.play_note_C) refers to buttonled.o(.text.play_note_C) for [Anonymous Symbol]
-    buttonled.o(.text.play_note_D) refers to buttonled.o(.bss.note_D) for note_D
-    buttonled.o(.ARM.exidx.text.play_note_D) refers to buttonled.o(.text.play_note_D) for [Anonymous Symbol]
-    buttonled.o(.text.play_note_E) refers to buttonled.o(.bss.note_E) for note_E
-    buttonled.o(.ARM.exidx.text.play_note_E) refers to buttonled.o(.text.play_note_E) for [Anonymous Symbol]
-    buttonled.o(.text.play_note_F) refers to buttonled.o(.bss.note_F) for note_F
-    buttonled.o(.ARM.exidx.text.play_note_F) refers to buttonled.o(.text.play_note_F) for [Anonymous Symbol]
+    buttonled.o(.ARM.exidx.text.Switch_In) refers to buttonled.o(.text.Switch_In) for [Anonymous Symbol]
     buttonled.o(.text.GPIOPortD_Handler) refers to buttonled.o(.bss.curr_mode) for curr_mode
-    buttonled.o(.text.GPIOPortD_Handler) refers to buttonled.o(.bss.note_C) for note_C
-    buttonled.o(.text.GPIOPortD_Handler) refers to buttonled.o(.bss.note_D) for note_D
-    buttonled.o(.text.GPIOPortD_Handler) refers to buttonled.o(.bss.note_E) for note_E
-    buttonled.o(.text.GPIOPortD_Handler) refers to buttonled.o(.bss.note_F) for note_F
+    buttonled.o(.text.GPIOPortD_Handler) refers to sound.o(.text.play_note_C) for play_note_C
+    buttonled.o(.text.GPIOPortD_Handler) refers to sound.o(.text.play_note_D) for play_note_D
+    buttonled.o(.text.GPIOPortD_Handler) refers to sound.o(.text.play_note_E) for play_note_E
+    buttonled.o(.text.GPIOPortD_Handler) refers to sound.o(.text.play_note_F) for play_note_F
     buttonled.o(.ARM.exidx.text.GPIOPortD_Handler) refers to buttonled.o(.text.GPIOPortD_Handler) for [Anonymous Symbol]
     __main.o(!!!main) refers to __rtentry.o(.ARM.Collect$$rtentry$$00000000) for __rt_entry
     __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$0000000A) for __rt_entry_li
@@ -175,14 +218,27 @@ Removing Unused input sections from the image.
 
     Removing sound.o(.text), (0 bytes).
     Removing sound.o(.ARM.exidx.text.DAC_Init), (8 bytes).
+    Removing sound.o(.ARM.exidx.text.Sound_Init), (8 bytes).
     Removing sound.o(.ARM.exidx.text.Sound_Start), (8 bytes).
     Removing sound.o(.ARM.exidx.text.Sound_stop), (8 bytes).
     Removing sound.o(.ARM.exidx.text.SysTick_Handler), (8 bytes).
+    Removing sound.o(.ARM.exidx.text.next_song), (8 bytes).
+    Removing sound.o(.ARM.exidx.text.next_octave), (8 bytes).
     Removing sound.o(.ARM.exidx.text.GPIOPortF_Handler), (8 bytes).
     Removing sound.o(.ARM.exidx.text.Delay), (8 bytes).
     Removing sound.o(.ARM.exidx.text.play_a_song), (8 bytes).
+    Removing sound.o(.ARM.exidx.text.play_note_C), (8 bytes).
+    Removing sound.o(.ARM.exidx.text.play_note_D), (8 bytes).
+    Removing sound.o(.ARM.exidx.text.play_note_E), (8 bytes).
+    Removing sound.o(.ARM.exidx.text.play_note_F), (8 bytes).
+    Removing sound.o(.text.play_note_G), (58 bytes).
+    Removing sound.o(.ARM.exidx.text.play_note_G), (8 bytes).
+    Removing sound.o(.text.play_note_A), (58 bytes).
+    Removing sound.o(.ARM.exidx.text.play_note_A), (8 bytes).
+    Removing sound.o(.text.play_note_B), (58 bytes).
+    Removing sound.o(.ARM.exidx.text.play_note_B), (8 bytes).
+    Removing sound.o(.bss.curr_song), (1 bytes).
     Removing sound.o(.data.stop_play), (1 bytes).
-    Removing sound.o(.bss.play), (1 bytes).
     Removing project1p2.o(.text), (0 bytes).
     Removing project1p2.o(.ARM.exidx.text.main), (8 bytes).
     Removing project1p2.o(.ARM.use_no_argv), (4 bytes).
@@ -190,18 +246,12 @@ Removing Unused input sections from the image.
     Removing buttonled.o(.ARM.exidx.text.ButtonLed_Init), (8 bytes).
     Removing buttonled.o(.ARM.exidx.text.PianoKeys_Init), (8 bytes).
     Removing buttonled.o(.ARM.exidx.text.get_current_mode), (8 bytes).
-    Removing buttonled.o(.text.play_note_C), (12 bytes).
-    Removing buttonled.o(.ARM.exidx.text.play_note_C), (8 bytes).
-    Removing buttonled.o(.text.play_note_D), (12 bytes).
-    Removing buttonled.o(.ARM.exidx.text.play_note_D), (8 bytes).
-    Removing buttonled.o(.text.play_note_E), (12 bytes).
-    Removing buttonled.o(.ARM.exidx.text.play_note_E), (8 bytes).
-    Removing buttonled.o(.text.play_note_F), (12 bytes).
-    Removing buttonled.o(.ARM.exidx.text.play_note_F), (8 bytes).
+    Removing buttonled.o(.text.Switch_In), (16 bytes).
+    Removing buttonled.o(.ARM.exidx.text.Switch_In), (8 bytes).
     Removing buttonled.o(.ARM.exidx.text.GPIOPortD_Handler), (8 bytes).
     Removing buttonled.o(.bss.major_idx), (1 bytes).
 
-27 unused section(s) (total 183 bytes) removed from the image.
+34 unused section(s) (total 381 bytes) removed from the image.
 
 ==============================================================================
 
@@ -327,19 +377,26 @@ Image Symbol Table
     [Anonymous Symbol]                       0x000004e8   Section        0  sound.o(.text.DAC_Init)
     [Anonymous Symbol]                       0x00000564   Section        0  sound.o(.text.Delay)
     [Anonymous Symbol]                       0x00000584   Section        0  buttonled.o(.text.GPIOPortD_Handler)
-    [Anonymous Symbol]                       0x0000067c   Section        0  sound.o(.text.GPIOPortF_Handler)
-    [Anonymous Symbol]                       0x000007a0   Section        0  buttonled.o(.text.PianoKeys_Init)
-    [Anonymous Symbol]                       0x000008bc   Section        0  sound.o(.text.Sound_Start)
-    [Anonymous Symbol]                       0x000008f4   Section        0  sound.o(.text.Sound_stop)
-    [Anonymous Symbol]                       0x00000908   Section        0  sound.o(.text.SysTick_Handler)
-    [Anonymous Symbol]                       0x00000944   Section        0  buttonled.o(.text.get_current_mode)
-    [Anonymous Symbol]                       0x00000950   Section        0  project1p2.o(.text.main)
-    [Anonymous Symbol]                       0x00000994   Section        0  sound.o(.text.play_a_song)
+    [Anonymous Symbol]                       0x0000064c   Section        0  sound.o(.text.GPIOPortF_Handler)
+    [Anonymous Symbol]                       0x00000734   Section        0  buttonled.o(.text.PianoKeys_Init)
+    [Anonymous Symbol]                       0x00000850   Section        0  sound.o(.text.Sound_Init)
+    [Anonymous Symbol]                       0x00000884   Section        0  sound.o(.text.Sound_Start)
+    [Anonymous Symbol]                       0x000008b8   Section        0  sound.o(.text.Sound_stop)
+    [Anonymous Symbol]                       0x000008cc   Section        0  sound.o(.text.SysTick_Handler)
+    [Anonymous Symbol]                       0x00000908   Section        0  buttonled.o(.text.get_current_mode)
+    [Anonymous Symbol]                       0x00000914   Section        0  project1p2.o(.text.main)
+    [Anonymous Symbol]                       0x0000095c   Section        0  sound.o(.text.next_octave)
+    [Anonymous Symbol]                       0x00000980   Section        0  sound.o(.text.next_song)
+    [Anonymous Symbol]                       0x000009a4   Section        0  sound.o(.text.play_a_song)
+    [Anonymous Symbol]                       0x00000ad8   Section        0  sound.o(.text.play_note_C)
+    [Anonymous Symbol]                       0x00000b10   Section        0  sound.o(.text.play_note_D)
+    [Anonymous Symbol]                       0x00000b4c   Section        0  sound.o(.text.play_note_E)
+    [Anonymous Symbol]                       0x00000b88   Section        0  sound.o(.text.play_note_F)
     .bss                                     0x20000010   Section       96  libspace.o(.bss)
-    HeapMem                                  0x20000080   Data           0  startup.o(HEAP)
-    StackMem                                 0x20000080   Data           0  startup.o(STACK)
-    HEAP                                     0x20000080   Section        0  startup.o(HEAP)
-    STACK                                    0x20000080   Section     1024  startup.o(STACK)
+    HeapMem                                  0x20000078   Data           0  startup.o(HEAP)
+    StackMem                                 0x20000078   Data           0  startup.o(STACK)
+    HEAP                                     0x20000078   Section        0  startup.o(HEAP)
+    STACK                                    0x20000078   Section     1024  startup.o(STACK)
 
     Global Symbols
 
@@ -568,34 +625,36 @@ Image Symbol Table
     ButtonLed_Init                           0x000003cd   Thumb Code   282  buttonled.o(.text.ButtonLed_Init)
     DAC_Init                                 0x000004e9   Thumb Code   122  sound.o(.text.DAC_Init)
     Delay                                    0x00000565   Thumb Code    32  sound.o(.text.Delay)
-    GPIOPortD_Handler                        0x00000585   Thumb Code   246  buttonled.o(.text.GPIOPortD_Handler)
-    GPIOPortF_Handler                        0x0000067d   Thumb Code   290  sound.o(.text.GPIOPortF_Handler)
-    PianoKeys_Init                           0x000007a1   Thumb Code   282  buttonled.o(.text.PianoKeys_Init)
-    Sound_Start                              0x000008bd   Thumb Code    56  sound.o(.text.Sound_Start)
-    Sound_stop                               0x000008f5   Thumb Code    18  sound.o(.text.Sound_stop)
-    SysTick_Handler                          0x00000909   Thumb Code    58  sound.o(.text.SysTick_Handler)
-    get_current_mode                         0x00000945   Thumb Code    12  buttonled.o(.text.get_current_mode)
-    main                                     0x00000951   Thumb Code    66  project1p2.o(.text.main)
-    play_a_song                              0x00000995   Thumb Code   248  sound.o(.text.play_a_song)
-    MaryHadALittleLamb                       0x00000a8c   Data         208  sound.o(.rodata.MaryHadALittleLamb)
-    SineWave                                 0x00000b5c   Data          64  sound.o(.rodata.SineWave)
-    Tone_Tab                                 0x00000b9c   Data         112  sound.o(.rodata.Tone_Tab)
-    TwinkleTwinkleLittleStars                0x00000c0c   Data         344  sound.o(.rodata.TwinkleTwinkleLittleStars)
-    happybirthday                            0x00000d64   Data         232  sound.o(.rodata.happybirthday)
-    Region$$Table$$Base                      0x00000e4c   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x00000e6c   Number         0  anon$$obj.o(Region$$Table)
+    GPIOPortD_Handler                        0x00000585   Thumb Code   200  buttonled.o(.text.GPIOPortD_Handler)
+    GPIOPortF_Handler                        0x0000064d   Thumb Code   230  sound.o(.text.GPIOPortF_Handler)
+    PianoKeys_Init                           0x00000735   Thumb Code   282  buttonled.o(.text.PianoKeys_Init)
+    Sound_Init                               0x00000851   Thumb Code    50  sound.o(.text.Sound_Init)
+    Sound_Start                              0x00000885   Thumb Code    50  sound.o(.text.Sound_Start)
+    Sound_stop                               0x000008b9   Thumb Code    18  sound.o(.text.Sound_stop)
+    SysTick_Handler                          0x000008cd   Thumb Code    58  sound.o(.text.SysTick_Handler)
+    get_current_mode                         0x00000909   Thumb Code    12  buttonled.o(.text.get_current_mode)
+    main                                     0x00000915   Thumb Code    70  project1p2.o(.text.main)
+    next_octave                              0x0000095d   Thumb Code    36  sound.o(.text.next_octave)
+    next_song                                0x00000981   Thumb Code    36  sound.o(.text.next_song)
+    play_a_song                              0x000009a5   Thumb Code   306  sound.o(.text.play_a_song)
+    play_note_C                              0x00000ad9   Thumb Code    56  sound.o(.text.play_note_C)
+    play_note_D                              0x00000b11   Thumb Code    58  sound.o(.text.play_note_D)
+    play_note_E                              0x00000b4d   Thumb Code    58  sound.o(.text.play_note_E)
+    play_note_F                              0x00000b89   Thumb Code    58  sound.o(.text.play_note_F)
+    MaryHadALittleLamb                       0x00000bc4   Data         208  sound.o(.rodata.MaryHadALittleLamb)
+    SineWave                                 0x00000c94   Data          64  sound.o(.rodata.SineWave)
+    Tone_Tab                                 0x00000cd4   Data         112  sound.o(.rodata.Tone_Tab)
+    TwinkleTwinkleLittleStars                0x00000d44   Data         344  sound.o(.rodata.TwinkleTwinkleLittleStars)
+    happybirthday                            0x00000e9c   Data         232  sound.o(.rodata.happybirthday)
+    Region$$Table$$Base                      0x00000f84   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x00000fa4   Number         0  anon$$obj.o(Region$$Table)
     songs                                    0x20000000   Data          12  sound.o(.data.songs)
     __libspace_start                         0x20000010   Data          96  libspace.o(.bss)
     Index                                    0x20000070   Data           1  sound.o(.bss.Index)
     __temporary_stack_top$libspace           0x20000070   Data           0  libspace.o(.bss)
     curr_mode                                0x20000071   Data           1  buttonled.o(.bss.curr_mode)
-    curr_song                                0x20000072   Data           1  sound.o(.bss.curr_song)
-    note_C                                   0x20000073   Data           1  buttonled.o(.bss.note_C)
-    note_D                                   0x20000074   Data           1  buttonled.o(.bss.note_D)
-    note_E                                   0x20000075   Data           1  buttonled.o(.bss.note_E)
-    note_F                                   0x20000076   Data           1  buttonled.o(.bss.note_F)
-    octave                                   0x20000077   Data           1  sound.o(.bss.octave)
-    songIdx                                  0x20000078   Data           1  sound.o(.bss.songIdx)
+    octave                                   0x20000072   Data           1  sound.o(.bss.octave)
+    songIdx                                  0x20000073   Data           1  sound.o(.bss.songIdx)
 
 
 
@@ -605,123 +664,130 @@ Memory Map of the image
 
   Image Entry point : 0x0000026d
 
-  Load Region LR_1 (Base: 0x00000000, Size: 0x00000e78, Max: 0xffffffff, ABSOLUTE)
+  Load Region LR_1 (Base: 0x00000000, Size: 0x00000fb0, Max: 0xffffffff, ABSOLUTE)
 
-    Execution Region ER_RO (Exec base: 0x00000000, Load base: 0x00000000, Size: 0x00000e6c, Max: 0xffffffff, ABSOLUTE)
+    Execution Region ER_RO (Exec base: 0x00000000, Load base: 0x00000000, Size: 0x00000fa4, Max: 0xffffffff, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
     0x00000000   0x00000000   0x00000284   Code   RO            3  * RESET               startup.o
-    0x00000284   0x00000284   0x00000008   Code   RO           87  * !!!main             c_w.l(__main.o)
-    0x0000028c   0x0000028c   0x00000034   Code   RO          252    !!!scatter          c_w.l(__scatter.o)
-    0x000002c0   0x000002c0   0x0000001a   Code   RO          254    !!handler_copy      c_w.l(__scatter_copy.o)
+    0x00000284   0x00000284   0x00000008   Code   RO           96  * !!!main             c_w.l(__main.o)
+    0x0000028c   0x0000028c   0x00000034   Code   RO          261    !!!scatter          c_w.l(__scatter.o)
+    0x000002c0   0x000002c0   0x0000001a   Code   RO          263    !!handler_copy      c_w.l(__scatter_copy.o)
     0x000002da   0x000002da   0x00000002   PAD
-    0x000002dc   0x000002dc   0x0000001c   Code   RO          256    !!handler_zi        c_w.l(__scatter_zi.o)
-    0x000002f8   0x000002f8   0x00000002   Code   RO          114    .ARM.Collect$$libinit$$00000000  c_w.l(libinit.o)
-    0x000002fa   0x000002fa   0x00000000   Code   RO          121    .ARM.Collect$$libinit$$00000002  c_w.l(libinit2.o)
-    0x000002fa   0x000002fa   0x00000000   Code   RO          123    .ARM.Collect$$libinit$$00000004  c_w.l(libinit2.o)
-    0x000002fa   0x000002fa   0x00000000   Code   RO          125    .ARM.Collect$$libinit$$00000006  c_w.l(libinit2.o)
-    0x000002fa   0x000002fa   0x00000000   Code   RO          128    .ARM.Collect$$libinit$$0000000C  c_w.l(libinit2.o)
-    0x000002fa   0x000002fa   0x00000000   Code   RO          130    .ARM.Collect$$libinit$$0000000E  c_w.l(libinit2.o)
-    0x000002fa   0x000002fa   0x00000000   Code   RO          132    .ARM.Collect$$libinit$$00000010  c_w.l(libinit2.o)
-    0x000002fa   0x000002fa   0x00000000   Code   RO          135    .ARM.Collect$$libinit$$00000013  c_w.l(libinit2.o)
-    0x000002fa   0x000002fa   0x00000000   Code   RO          137    .ARM.Collect$$libinit$$00000015  c_w.l(libinit2.o)
-    0x000002fa   0x000002fa   0x00000000   Code   RO          139    .ARM.Collect$$libinit$$00000017  c_w.l(libinit2.o)
-    0x000002fa   0x000002fa   0x00000000   Code   RO          141    .ARM.Collect$$libinit$$00000019  c_w.l(libinit2.o)
-    0x000002fa   0x000002fa   0x00000000   Code   RO          143    .ARM.Collect$$libinit$$0000001B  c_w.l(libinit2.o)
-    0x000002fa   0x000002fa   0x00000000   Code   RO          145    .ARM.Collect$$libinit$$0000001D  c_w.l(libinit2.o)
-    0x000002fa   0x000002fa   0x00000000   Code   RO          147    .ARM.Collect$$libinit$$0000001F  c_w.l(libinit2.o)
-    0x000002fa   0x000002fa   0x00000000   Code   RO          149    .ARM.Collect$$libinit$$00000021  c_w.l(libinit2.o)
-    0x000002fa   0x000002fa   0x00000000   Code   RO          151    .ARM.Collect$$libinit$$00000023  c_w.l(libinit2.o)
-    0x000002fa   0x000002fa   0x00000000   Code   RO          153    .ARM.Collect$$libinit$$00000025  c_w.l(libinit2.o)
-    0x000002fa   0x000002fa   0x00000000   Code   RO          155    .ARM.Collect$$libinit$$00000027  c_w.l(libinit2.o)
-    0x000002fa   0x000002fa   0x00000000   Code   RO          159    .ARM.Collect$$libinit$$0000002E  c_w.l(libinit2.o)
-    0x000002fa   0x000002fa   0x00000000   Code   RO          161    .ARM.Collect$$libinit$$00000030  c_w.l(libinit2.o)
-    0x000002fa   0x000002fa   0x00000000   Code   RO          163    .ARM.Collect$$libinit$$00000032  c_w.l(libinit2.o)
-    0x000002fa   0x000002fa   0x00000000   Code   RO          165    .ARM.Collect$$libinit$$00000034  c_w.l(libinit2.o)
-    0x000002fa   0x000002fa   0x00000002   Code   RO          166    .ARM.Collect$$libinit$$00000035  c_w.l(libinit2.o)
-    0x000002fc   0x000002fc   0x00000002   Code   RO          188    .ARM.Collect$$libshutdown$$00000000  c_w.l(libshutdown.o)
-    0x000002fe   0x000002fe   0x00000000   Code   RO          203    .ARM.Collect$$libshutdown$$00000002  c_w.l(libshutdown2.o)
-    0x000002fe   0x000002fe   0x00000000   Code   RO          205    .ARM.Collect$$libshutdown$$00000004  c_w.l(libshutdown2.o)
-    0x000002fe   0x000002fe   0x00000000   Code   RO          208    .ARM.Collect$$libshutdown$$00000007  c_w.l(libshutdown2.o)
-    0x000002fe   0x000002fe   0x00000000   Code   RO          211    .ARM.Collect$$libshutdown$$0000000A  c_w.l(libshutdown2.o)
-    0x000002fe   0x000002fe   0x00000000   Code   RO          213    .ARM.Collect$$libshutdown$$0000000C  c_w.l(libshutdown2.o)
-    0x000002fe   0x000002fe   0x00000000   Code   RO          216    .ARM.Collect$$libshutdown$$0000000F  c_w.l(libshutdown2.o)
-    0x000002fe   0x000002fe   0x00000002   Code   RO          217    .ARM.Collect$$libshutdown$$00000010  c_w.l(libshutdown2.o)
-    0x00000300   0x00000300   0x00000000   Code   RO           89    .ARM.Collect$$rtentry$$00000000  c_w.l(__rtentry.o)
-    0x00000300   0x00000300   0x00000000   Code   RO           91    .ARM.Collect$$rtentry$$00000002  c_w.l(__rtentry2.o)
-    0x00000300   0x00000300   0x00000006   Code   RO          103    .ARM.Collect$$rtentry$$00000004  c_w.l(__rtentry4.o)
-    0x00000306   0x00000306   0x00000000   Code   RO           93    .ARM.Collect$$rtentry$$00000009  c_w.l(__rtentry2.o)
-    0x00000306   0x00000306   0x00000004   Code   RO           94    .ARM.Collect$$rtentry$$0000000A  c_w.l(__rtentry2.o)
-    0x0000030a   0x0000030a   0x00000000   Code   RO           96    .ARM.Collect$$rtentry$$0000000C  c_w.l(__rtentry2.o)
-    0x0000030a   0x0000030a   0x00000008   Code   RO           97    .ARM.Collect$$rtentry$$0000000D  c_w.l(__rtentry2.o)
-    0x00000312   0x00000312   0x00000002   Code   RO          118    .ARM.Collect$$rtexit$$00000000  c_w.l(rtexit.o)
-    0x00000314   0x00000314   0x00000000   Code   RO          168    .ARM.Collect$$rtexit$$00000002  c_w.l(rtexit2.o)
-    0x00000314   0x00000314   0x00000004   Code   RO          169    .ARM.Collect$$rtexit$$00000003  c_w.l(rtexit2.o)
-    0x00000318   0x00000318   0x00000006   Code   RO          170    .ARM.Collect$$rtexit$$00000004  c_w.l(rtexit2.o)
+    0x000002dc   0x000002dc   0x0000001c   Code   RO          265    !!handler_zi        c_w.l(__scatter_zi.o)
+    0x000002f8   0x000002f8   0x00000002   Code   RO          123    .ARM.Collect$$libinit$$00000000  c_w.l(libinit.o)
+    0x000002fa   0x000002fa   0x00000000   Code   RO          130    .ARM.Collect$$libinit$$00000002  c_w.l(libinit2.o)
+    0x000002fa   0x000002fa   0x00000000   Code   RO          132    .ARM.Collect$$libinit$$00000004  c_w.l(libinit2.o)
+    0x000002fa   0x000002fa   0x00000000   Code   RO          134    .ARM.Collect$$libinit$$00000006  c_w.l(libinit2.o)
+    0x000002fa   0x000002fa   0x00000000   Code   RO          137    .ARM.Collect$$libinit$$0000000C  c_w.l(libinit2.o)
+    0x000002fa   0x000002fa   0x00000000   Code   RO          139    .ARM.Collect$$libinit$$0000000E  c_w.l(libinit2.o)
+    0x000002fa   0x000002fa   0x00000000   Code   RO          141    .ARM.Collect$$libinit$$00000010  c_w.l(libinit2.o)
+    0x000002fa   0x000002fa   0x00000000   Code   RO          144    .ARM.Collect$$libinit$$00000013  c_w.l(libinit2.o)
+    0x000002fa   0x000002fa   0x00000000   Code   RO          146    .ARM.Collect$$libinit$$00000015  c_w.l(libinit2.o)
+    0x000002fa   0x000002fa   0x00000000   Code   RO          148    .ARM.Collect$$libinit$$00000017  c_w.l(libinit2.o)
+    0x000002fa   0x000002fa   0x00000000   Code   RO          150    .ARM.Collect$$libinit$$00000019  c_w.l(libinit2.o)
+    0x000002fa   0x000002fa   0x00000000   Code   RO          152    .ARM.Collect$$libinit$$0000001B  c_w.l(libinit2.o)
+    0x000002fa   0x000002fa   0x00000000   Code   RO          154    .ARM.Collect$$libinit$$0000001D  c_w.l(libinit2.o)
+    0x000002fa   0x000002fa   0x00000000   Code   RO          156    .ARM.Collect$$libinit$$0000001F  c_w.l(libinit2.o)
+    0x000002fa   0x000002fa   0x00000000   Code   RO          158    .ARM.Collect$$libinit$$00000021  c_w.l(libinit2.o)
+    0x000002fa   0x000002fa   0x00000000   Code   RO          160    .ARM.Collect$$libinit$$00000023  c_w.l(libinit2.o)
+    0x000002fa   0x000002fa   0x00000000   Code   RO          162    .ARM.Collect$$libinit$$00000025  c_w.l(libinit2.o)
+    0x000002fa   0x000002fa   0x00000000   Code   RO          164    .ARM.Collect$$libinit$$00000027  c_w.l(libinit2.o)
+    0x000002fa   0x000002fa   0x00000000   Code   RO          168    .ARM.Collect$$libinit$$0000002E  c_w.l(libinit2.o)
+    0x000002fa   0x000002fa   0x00000000   Code   RO          170    .ARM.Collect$$libinit$$00000030  c_w.l(libinit2.o)
+    0x000002fa   0x000002fa   0x00000000   Code   RO          172    .ARM.Collect$$libinit$$00000032  c_w.l(libinit2.o)
+    0x000002fa   0x000002fa   0x00000000   Code   RO          174    .ARM.Collect$$libinit$$00000034  c_w.l(libinit2.o)
+    0x000002fa   0x000002fa   0x00000002   Code   RO          175    .ARM.Collect$$libinit$$00000035  c_w.l(libinit2.o)
+    0x000002fc   0x000002fc   0x00000002   Code   RO          197    .ARM.Collect$$libshutdown$$00000000  c_w.l(libshutdown.o)
+    0x000002fe   0x000002fe   0x00000000   Code   RO          212    .ARM.Collect$$libshutdown$$00000002  c_w.l(libshutdown2.o)
+    0x000002fe   0x000002fe   0x00000000   Code   RO          214    .ARM.Collect$$libshutdown$$00000004  c_w.l(libshutdown2.o)
+    0x000002fe   0x000002fe   0x00000000   Code   RO          217    .ARM.Collect$$libshutdown$$00000007  c_w.l(libshutdown2.o)
+    0x000002fe   0x000002fe   0x00000000   Code   RO          220    .ARM.Collect$$libshutdown$$0000000A  c_w.l(libshutdown2.o)
+    0x000002fe   0x000002fe   0x00000000   Code   RO          222    .ARM.Collect$$libshutdown$$0000000C  c_w.l(libshutdown2.o)
+    0x000002fe   0x000002fe   0x00000000   Code   RO          225    .ARM.Collect$$libshutdown$$0000000F  c_w.l(libshutdown2.o)
+    0x000002fe   0x000002fe   0x00000002   Code   RO          226    .ARM.Collect$$libshutdown$$00000010  c_w.l(libshutdown2.o)
+    0x00000300   0x00000300   0x00000000   Code   RO           98    .ARM.Collect$$rtentry$$00000000  c_w.l(__rtentry.o)
+    0x00000300   0x00000300   0x00000000   Code   RO          100    .ARM.Collect$$rtentry$$00000002  c_w.l(__rtentry2.o)
+    0x00000300   0x00000300   0x00000006   Code   RO          112    .ARM.Collect$$rtentry$$00000004  c_w.l(__rtentry4.o)
+    0x00000306   0x00000306   0x00000000   Code   RO          102    .ARM.Collect$$rtentry$$00000009  c_w.l(__rtentry2.o)
+    0x00000306   0x00000306   0x00000004   Code   RO          103    .ARM.Collect$$rtentry$$0000000A  c_w.l(__rtentry2.o)
+    0x0000030a   0x0000030a   0x00000000   Code   RO          105    .ARM.Collect$$rtentry$$0000000C  c_w.l(__rtentry2.o)
+    0x0000030a   0x0000030a   0x00000008   Code   RO          106    .ARM.Collect$$rtentry$$0000000D  c_w.l(__rtentry2.o)
+    0x00000312   0x00000312   0x00000002   Code   RO          127    .ARM.Collect$$rtexit$$00000000  c_w.l(rtexit.o)
+    0x00000314   0x00000314   0x00000000   Code   RO          177    .ARM.Collect$$rtexit$$00000002  c_w.l(rtexit2.o)
+    0x00000314   0x00000314   0x00000004   Code   RO          178    .ARM.Collect$$rtexit$$00000003  c_w.l(rtexit2.o)
+    0x00000318   0x00000318   0x00000006   Code   RO          179    .ARM.Collect$$rtexit$$00000004  c_w.l(rtexit2.o)
     0x0000031e   0x0000031e   0x00000002   PAD
     0x00000320   0x00000320   0x00000030   Code   RO            4    .text               startup.o
-    0x00000350   0x00000350   0x00000006   Code   RO           85    .text               c_w.l(heapauxi.o)
-    0x00000356   0x00000356   0x0000004a   Code   RO          105    .text               c_w.l(sys_stackheap_outer.o)
-    0x000003a0   0x000003a0   0x00000012   Code   RO          107    .text               c_w.l(exit.o)
+    0x00000350   0x00000350   0x00000006   Code   RO           94    .text               c_w.l(heapauxi.o)
+    0x00000356   0x00000356   0x0000004a   Code   RO          114    .text               c_w.l(sys_stackheap_outer.o)
+    0x000003a0   0x000003a0   0x00000012   Code   RO          116    .text               c_w.l(exit.o)
     0x000003b2   0x000003b2   0x00000002   PAD
-    0x000003b4   0x000003b4   0x00000008   Code   RO          115    .text               c_w.l(libspace.o)
-    0x000003bc   0x000003bc   0x0000000c   Code   RO          178    .text               c_w.l(sys_exit.o)
-    0x000003c8   0x000003c8   0x00000002   Code   RO          193    .text               c_w.l(use_no_semi.o)
-    0x000003ca   0x000003ca   0x00000000   Code   RO          195    .text               c_w.l(indicate_semi.o)
+    0x000003b4   0x000003b4   0x00000008   Code   RO          124    .text               c_w.l(libspace.o)
+    0x000003bc   0x000003bc   0x0000000c   Code   RO          187    .text               c_w.l(sys_exit.o)
+    0x000003c8   0x000003c8   0x00000002   Code   RO          202    .text               c_w.l(use_no_semi.o)
+    0x000003ca   0x000003ca   0x00000000   Code   RO          204    .text               c_w.l(indicate_semi.o)
     0x000003ca   0x000003ca   0x00000002   PAD
-    0x000003cc   0x000003cc   0x0000011a   Code   RO           55    .text.ButtonLed_Init  buttonled.o
+    0x000003cc   0x000003cc   0x0000011a   Code   RO           74    .text.ButtonLed_Init  buttonled.o
     0x000004e6   0x000004e6   0x00000002   PAD
     0x000004e8   0x000004e8   0x0000007a   Code   RO           13    .text.DAC_Init      sound.o
     0x00000562   0x00000562   0x00000002   PAD
-    0x00000564   0x00000564   0x00000020   Code   RO           23    .text.Delay         sound.o
-    0x00000584   0x00000584   0x000000f6   Code   RO           69    .text.GPIOPortD_Handler  buttonled.o
-    0x0000067a   0x0000067a   0x00000002   PAD
-    0x0000067c   0x0000067c   0x00000122   Code   RO           21    .text.GPIOPortF_Handler  sound.o
-    0x0000079e   0x0000079e   0x00000002   PAD
-    0x000007a0   0x000007a0   0x0000011a   Code   RO           57    .text.PianoKeys_Init  buttonled.o
-    0x000008ba   0x000008ba   0x00000002   PAD
-    0x000008bc   0x000008bc   0x00000038   Code   RO           15    .text.Sound_Start   sound.o
-    0x000008f4   0x000008f4   0x00000012   Code   RO           17    .text.Sound_stop    sound.o
+    0x00000564   0x00000564   0x00000020   Code   RO           29    .text.Delay         sound.o
+    0x00000584   0x00000584   0x000000c8   Code   RO           82    .text.GPIOPortD_Handler  buttonled.o
+    0x0000064c   0x0000064c   0x000000e6   Code   RO           27    .text.GPIOPortF_Handler  sound.o
+    0x00000732   0x00000732   0x00000002   PAD
+    0x00000734   0x00000734   0x0000011a   Code   RO           76    .text.PianoKeys_Init  buttonled.o
+    0x0000084e   0x0000084e   0x00000002   PAD
+    0x00000850   0x00000850   0x00000032   Code   RO           15    .text.Sound_Init    sound.o
+    0x00000882   0x00000882   0x00000002   PAD
+    0x00000884   0x00000884   0x00000032   Code   RO           17    .text.Sound_Start   sound.o
+    0x000008b6   0x000008b6   0x00000002   PAD
+    0x000008b8   0x000008b8   0x00000012   Code   RO           19    .text.Sound_stop    sound.o
+    0x000008ca   0x000008ca   0x00000002   PAD
+    0x000008cc   0x000008cc   0x0000003a   Code   RO           21    .text.SysTick_Handler  sound.o
     0x00000906   0x00000906   0x00000002   PAD
-    0x00000908   0x00000908   0x0000003a   Code   RO           19    .text.SysTick_Handler  sound.o
-    0x00000942   0x00000942   0x00000002   PAD
-    0x00000944   0x00000944   0x0000000c   Code   RO           59    .text.get_current_mode  buttonled.o
-    0x00000950   0x00000950   0x00000042   Code   RO           46    .text.main          project1p2.o
-    0x00000992   0x00000992   0x00000002   PAD
-    0x00000994   0x00000994   0x000000f8   Code   RO           25    .text.play_a_song   sound.o
-    0x00000a8c   0x00000a8c   0x000000d0   Data   RO           29    .rodata.MaryHadALittleLamb  sound.o
-    0x00000b5c   0x00000b5c   0x00000040   Data   RO           27    .rodata.SineWave    sound.o
-    0x00000b9c   0x00000b9c   0x00000070   Data   RO           28    .rodata.Tone_Tab    sound.o
-    0x00000c0c   0x00000c0c   0x00000158   Data   RO           30    .rodata.TwinkleTwinkleLittleStars  sound.o
-    0x00000d64   0x00000d64   0x000000e8   Data   RO           31    .rodata.happybirthday  sound.o
-    0x00000e4c   0x00000e4c   0x00000020   Data   RO          251    Region$$Table       anon$$obj.o
+    0x00000908   0x00000908   0x0000000c   Code   RO           78    .text.get_current_mode  buttonled.o
+    0x00000914   0x00000914   0x00000046   Code   RO           65    .text.main          project1p2.o
+    0x0000095a   0x0000095a   0x00000002   PAD
+    0x0000095c   0x0000095c   0x00000024   Code   RO           25    .text.next_octave   sound.o
+    0x00000980   0x00000980   0x00000024   Code   RO           23    .text.next_song     sound.o
+    0x000009a4   0x000009a4   0x00000132   Code   RO           31    .text.play_a_song   sound.o
+    0x00000ad6   0x00000ad6   0x00000002   PAD
+    0x00000ad8   0x00000ad8   0x00000038   Code   RO           33    .text.play_note_C   sound.o
+    0x00000b10   0x00000b10   0x0000003a   Code   RO           35    .text.play_note_D   sound.o
+    0x00000b4a   0x00000b4a   0x00000002   PAD
+    0x00000b4c   0x00000b4c   0x0000003a   Code   RO           37    .text.play_note_E   sound.o
+    0x00000b86   0x00000b86   0x00000002   PAD
+    0x00000b88   0x00000b88   0x0000003a   Code   RO           39    .text.play_note_F   sound.o
+    0x00000bc2   0x00000bc2   0x00000002   PAD
+    0x00000bc4   0x00000bc4   0x000000d0   Data   RO           50    .rodata.MaryHadALittleLamb  sound.o
+    0x00000c94   0x00000c94   0x00000040   Data   RO           47    .rodata.SineWave    sound.o
+    0x00000cd4   0x00000cd4   0x00000070   Data   RO           49    .rodata.Tone_Tab    sound.o
+    0x00000d44   0x00000d44   0x00000158   Data   RO           51    .rodata.TwinkleTwinkleLittleStars  sound.o
+    0x00000e9c   0x00000e9c   0x000000e8   Data   RO           52    .rodata.happybirthday  sound.o
+    0x00000f84   0x00000f84   0x00000020   Data   RO          260    Region$$Table       anon$$obj.o
 
 
-    Execution Region ER_RW (Exec base: 0x20000000, Load base: 0x00000e6c, Size: 0x0000000c, Max: 0xffffffff, ABSOLUTE)
+    Execution Region ER_RW (Exec base: 0x20000000, Load base: 0x00000fa4, Size: 0x0000000c, Max: 0xffffffff, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x20000000   0x00000e6c   0x0000000c   Data   RW           36    .data.songs         sound.o
+    0x20000000   0x00000fa4   0x0000000c   Data   RW           57    .data.songs         sound.o
 
 
-    Execution Region ER_ZI (Exec base: 0x20000010, Load base: 0x00000e78, Size: 0x00000470, Max: 0xffffffff, ABSOLUTE)
+    Execution Region ER_ZI (Exec base: 0x20000010, Load base: 0x00000fb0, Size: 0x00000468, Max: 0xffffffff, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x20000010        -       0x00000060   Zero   RW          116    .bss                c_w.l(libspace.o)
-    0x20000070        -       0x00000001   Zero   RW           35    .bss.Index          sound.o
-    0x20000071        -       0x00000001   Zero   RW           71    .bss.curr_mode      buttonled.o
-    0x20000072        -       0x00000001   Zero   RW           32    .bss.curr_song      sound.o
-    0x20000073        -       0x00000001   Zero   RW           73    .bss.note_C         buttonled.o
-    0x20000074        -       0x00000001   Zero   RW           74    .bss.note_D         buttonled.o
-    0x20000075        -       0x00000001   Zero   RW           75    .bss.note_E         buttonled.o
-    0x20000076        -       0x00000001   Zero   RW           76    .bss.note_F         buttonled.o
-    0x20000077        -       0x00000001   Zero   RW           34    .bss.octave         sound.o
-    0x20000078        -       0x00000001   Zero   RW           37    .bss.songIdx        sound.o
-    0x20000079   0x00000e78   0x00000007   PAD
-    0x20000080        -       0x00000000   Zero   RW            2    HEAP                startup.o
-    0x20000080        -       0x00000400   Zero   RW            1    STACK               startup.o
+    0x20000010        -       0x00000060   Zero   RW          125    .bss                c_w.l(libspace.o)
+    0x20000070        -       0x00000001   Zero   RW           56    .bss.Index          sound.o
+    0x20000071        -       0x00000001   Zero   RW           84    .bss.curr_mode      buttonled.o
+    0x20000072        -       0x00000001   Zero   RW           55    .bss.octave         sound.o
+    0x20000073        -       0x00000001   Zero   RW           48    .bss.songIdx        sound.o
+    0x20000074   0x00000fb0   0x00000004   PAD
+    0x20000078        -       0x00000000   Zero   RW            2    HEAP                startup.o
+    0x20000078        -       0x00000400   Zero   RW            1    STACK               startup.o
 
 
 ==============================================================================
@@ -731,15 +797,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
-       822          0          0          0          5       1723   buttonled.o
-        66          0          0          0          0        438   project1p2.o
-       824          0        960         12          4       2367   sound.o
+       776          0          0          0          1       1408   buttonled.o
+        70          0          0          0          0        431   project1p2.o
+      1168          0        960         12          3       3649   sound.o
        692        632          0          0       1024       1028   startup.o
 
     ----------------------------------------------------------------------
-      2420        632        992         12       1040       5556   Object Totals
+      2732        632        992         12       1032       6516   Object Totals
          0          0         32          0          0          0   (incl. Generated)
-        16          0          0          0          7          0   (incl. Padding)
+        26          0          0          0          4          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 
@@ -786,15 +852,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-      2700        648        992         12       1136       5992   Grand Totals
-      2700        648        992         12       1136       5992   ELF Image Totals
-      2700        648        992         12          0          0   ROM Totals
+      3012        648        992         12       1128       6952   Grand Totals
+      3012        648        992         12       1128       6952   ELF Image Totals
+      3012        648        992         12          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                 3692 (   3.61kB)
-    Total RW  Size (RW Data + ZI Data)              1148 (   1.12kB)
-    Total ROM Size (Code + RO Data + RW Data)       3704 (   3.62kB)
+    Total RO  Size (Code + RO Data)                 4004 (   3.91kB)
+    Total RW  Size (RW Data + ZI Data)              1140 (   1.11kB)
+    Total ROM Size (Code + RO Data + RW Data)       4016 (   3.92kB)
 
 ==============================================================================
 

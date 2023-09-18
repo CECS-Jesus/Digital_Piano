@@ -22,7 +22,8 @@ extern void WaitForInterrupt(void);
 // 3. Subroutines Section
 // MAIN: Mandatory for a C Program to be executable
 int main(void){
-	DisableInterrupts();    
+	DisableInterrupts();
+	Sound_Init();
 	DAC_Init();        // Port B 
 	ButtonLed_Init();  // Port F
 	PianoKeys_Init();  // Port D
