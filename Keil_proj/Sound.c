@@ -32,8 +32,7 @@ const uint8_t SineWave[64] = {32,35,38,41,44,47,49,52,54,56,58,59,61,62,62,63,63
 
 unsigned char Index;
 uint8_t songIdx = 0;
-
-
+															
 // initial values for piano major tones.
 // Assume SysTick clock frequency is 16MHz.
 const uint32_t Tone_Tab[] =
@@ -158,6 +157,7 @@ void GPIOPortF_Handler(void){
 		if(curr_mode == PIANO){
 			GPIO_PORTF_ICR_R = SW1; //ackowledge flag for sw1
 			curr_mode = AUTO_PLAY;
+			songIdx = 0;
 		}
 		else if(curr_mode == AUTO_PLAY){
 			GPIO_PORTF_ICR_R = SW1; //ackowledge flag for sw1
@@ -229,6 +229,7 @@ void play_note_C(void){
 	Sound_Start(Tone_Tab[c_idx]/NUM_SAMPLES);      // Play 8 major notes
 	Delay();
 	Sound_stop();
+	
 }
 
 void play_note_D(void){

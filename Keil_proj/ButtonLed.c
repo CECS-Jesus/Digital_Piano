@@ -22,7 +22,6 @@
 volatile uint8_t curr_mode=PIANO;  // 0: piano mode, 1: auto-play mode
 volatile uint8_t major_idx = 0;
 
-
 //---------------------Switch_Init---------------------
 // initialize onboard switch and LED interface
 // Input: none
@@ -93,19 +92,23 @@ void GPIOPortD_Handler(void){
 
 		if(GPIO_PORTD_RIS_R&0x01){	// if pd0 pressed
 			GPIO_PORTD_ICR_R = 0x01;	// acknowledge flag0
-			play_note_C();
-		}
+			while(GPIO_PORTD_DATA_R == 0x1E)
+				play_note_C();
+		}	
 		if(GPIO_PORTD_RIS_R&0x02){	// if pd1 pressed
 			GPIO_PORTD_ICR_R = 0x02;	// acknowledge flag1
-			play_note_D();
-		}
+			while(GPIO_PORTD_DATA_R == 0x1D)
+				play_note_D();
+		}		
 		if(GPIO_PORTD_RIS_R&0x04){	// if pd2 pressed
 			GPIO_PORTD_ICR_R = 0x04;	// acknowledge flag2
-			play_note_E();
+			while(GPIO_PORTD_DATA_R == 0x1B)
+				play_note_E();
 		}
 		if(GPIO_PORTD_RIS_R&0x08){	// if pd3 pressed
 			GPIO_PORTD_ICR_R = 0x08;	// acknowledge flag3
-			play_note_F();
+			while(GPIO_PORTD_DATA_R == 0x17)
+				play_note_F();
 		}			
 	}	 
 }
